@@ -3,5 +3,6 @@
 # m - first integer
 # n - second integer
 # return type: integer
+# example: (m,n) - (12, 9) => return 3
 def gcd(m,n):
   # fill-in code here
