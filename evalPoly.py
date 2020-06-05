@@ -5,7 +5,7 @@ import math
 # f - list of numbers, indicates coefficient of respective degree term
 # a - number to be evaluated
 # return type: number
-# example: ([7, -3, 0, 1], 4) => return 62 - wouldn't it be 59 instead? 
+# example: ([7, -3, 0, 1], 4) => return 59
 #          evaluates 7 - 3x + x^3 at x = 4
 
 def evalPoly(f,a):
