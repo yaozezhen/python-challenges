@@ -4,15 +4,18 @@ import random
 # pl - password length (in characters), must be at least 12 and at most 16
 # return type: string
 # example: pl - 12 => return "f2inuPw9!8)*"
+
 def passwordGen(pl): 
   if (pl < 12 or pl > 16): 
     return "Password length must be at least 12 and at most 16."
   check = 0
-  while check < 4: 
+  repeat = 0
+  while check < 4 or repeat == 1: 
     speChar = 0
     num = 0
     upper = 0
     lower = 0
+    repeat = 0
     pwAscii = []
     for i in range(pl): 
       pwAscii.append(random.randint(33,126))
@@ -33,6 +36,12 @@ def passwordGen(pl):
         lower = 1
         break
     check = speChar + num + upper + lower
+    for i in range(pl-1): 
+      for j in range(i+1,pl): 
+        if (pwAscii[i] == pwAscii[j]): 
+          repeat = 1
+      if (repeat == 1): 
+        break
   pw = []
   for item in pwAscii: 
     pw.append(chr(item))
