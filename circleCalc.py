@@ -14,7 +14,12 @@ import math
 #          Okay, bye bye :)
 def circleCalc():
   print("Today we will be finding the different measures a circle gives us.")
-  r = input("What would you like the radius to be? ")
+  while True: 
+    r = input("What would you like the radius to be? ")
+    if (float(r) <= 0): 
+      print("Choose a positive number. ")
+    else: 
+      break
   while True: 
     measurement = input("What would you like to calculate? [A: area| B: circumference] ")
     if(measurement == "A"): 
