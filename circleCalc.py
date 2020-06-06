@@ -13,5 +13,20 @@ import math
 #          Do you want to calculate anything else? [y|n] 'n'
 #          Okay, bye bye :)
 def circleCalc():
-  # fill-in code here
+  print("Today we will be finding the different measures a circle gives us.")
+  r = input("What would you like the radius to be? ")
+  while True: 
+    measurement = input("What would you like to calculate? [A: area| B: circumference] ")
+    if(measurement == "A"): 
+      a = math.pi * float(r) * float(r)
+      print("Okay, the area is " + str(a))
+    if(measurement == "B"): 
+      c = 2 * math.pi * float(r)
+      print("Okay, the circumference is " + str(c))
+    more = input("Do you want to calculate anything else? [Y|N] ")
+    if (more == "N"): 
+      break
+  print("Okay, bye :)")
   return 
+
+circleCalc()
