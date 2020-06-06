@@ -23,10 +23,10 @@ def circleCalc():
   while True: 
     measurement = input("What would you like to calculate? [A: area| B: circumference] ")
     if(measurement == "A"): 
-      a = math.pi * float(r) * float(r)
+      a = round(math.pi * float(r) * float(r), 2)
       print("Okay, the area is " + str(a))
     if(measurement == "B"): 
-      c = 2 * math.pi * float(r)
+      c = round(2 * math.pi * float(r), 2)
       print("Okay, the circumference is " + str(c))
     more = input("Do you want to calculate anything else? [Y|N] ")
     if (more == "N"): 
