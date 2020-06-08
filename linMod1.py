@@ -12,5 +12,6 @@ def linMod1(a,b,m):
   for x in range(m): 
     if(a*x % m == ans): 
       return x
+  return "No Solution."
 
 print(linMod1(3,7,4))
