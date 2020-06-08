@@ -8,4 +8,9 @@
 # return type: integer
 # example: (a,b,m) - (3,7,4) => returns 1
 def linMod1(a,b,m):
-  # fill-in code here
+  ans = b % m
+  for x in range(m): 
+    if(a*x % m == ans): 
+      return x
+
+print(linMod1(3,7,4))
