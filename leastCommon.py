@@ -5,4 +5,21 @@
 # return type: list of strings
 # example: ls - ["hello", "hi", "hello"] => return ["hi"]
 def leastCommon(ls): 
-  # fill-in code here
+  strDict = {}
+  for i in range(len(ls)): 
+    if (ls[i] not in strDict.keys()): 
+      strDict[ls[i]] = 1
+    else: 
+      strDict[ls[i]] += 1
+  minFreq = len(strDict)
+  outcome = []
+  for (key,value) in strDict.items(): 
+    if (value <= minFreq): 
+      minFreq = value
+  for (key,value) in strDict.items(): 
+    if (value == minFreq): 
+      outcome.append(key)
+  return outcome
+
+ls = ["hello","hi","hello"]
+print(leastCommon(ls))
