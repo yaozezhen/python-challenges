@@ -31,4 +31,4 @@ sample5 = [[0],[1],[2]]
 # matSub(sample1,sample2)
 # matMult(sample1,sample4)
 # matMult(sample3,sample5)
-# matId(4)
+# matMult(sample3,matId(3))
