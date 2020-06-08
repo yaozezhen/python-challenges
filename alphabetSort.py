@@ -4,4 +4,15 @@
 # return type: string
 # example: s - "happy" => return "ahppy"
 def alphabetSort(s):
-  # fill-in code here
+  ls1 = []
+  ls2 = []
+  for letter in s: 
+    ls1.append(ord(letter))
+  while True: 
+    ls2.append(chr(min(ls1)))
+    ls1.remove(min(ls1))
+    if(len(ls1) == 0): 
+      break
+  return "".join(ls2)
+
+print(alphabetSort("tessellation"))
