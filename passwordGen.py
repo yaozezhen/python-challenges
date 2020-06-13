@@ -5,9 +5,13 @@ import random
 # return type: string
 # example: pl - 12 => return "f2inuPw9!8)*"
 
-def passwordGen(pl): 
-  if (pl < 12 or pl > 16): 
-    return "Password length must be at least 12 and at most 16."
+def passwordGen(): 
+  while True: 
+    pl = int(input("How long would you like your password to be? "))
+    if (pl < 12 or pl > 16): 
+      print("Password length must be at least 12 and at most 16.")
+    else: 
+      break
   check = 0
   repeat = 0
   while check < 4 or repeat == 1: 
@@ -45,6 +49,6 @@ def passwordGen(pl):
   pw = []
   for item in pwAscii: 
     pw.append(chr(item))
-  return "".join(pw)
+  return "Your new password is: " + "".join(pw)
 
-print(passwordGen(15))
+print(passwordGen())
