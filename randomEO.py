@@ -5,4 +5,13 @@ import urllib.request, json
 # return type: list of 'odd' and 'even' strings
 # example: return ['odd','even','odd','even','even','odd','odd','even','odd','even']
 def randomEO():
-  # fill-in code here
+  url = urllib.request.urlopen("https://www.passwordrandom.com/query?command=int&min=0&max=10000&format=json&count=10")
+  data = json.loads(url.read())
+  ls = data["random"]
+  output = []
+  for i in range(10): 
+    if (ls[i] % 2 == 0): 
+      output.append("even")
+    else: 
+      output.append("odd")
+  return output
