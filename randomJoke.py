@@ -6,6 +6,4 @@ import urllib.request, json
 def randomJoke():
   url = urllib.request.urlopen("https://api.icndb.com/jokes/random/")
   data = json.loads(url.read())
-  # uncomment the line immediately below to see the contents of data, JSON objects are similar to dictionaries
-  # print (data)
-  # fill-in code
+  return data["value"]["joke"]
