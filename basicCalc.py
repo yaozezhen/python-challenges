@@ -1,7 +1,7 @@
 # function descriptor: basicCalc()
 # basic calculator based on user input
 # return type: nothing; program should end when the user types 'n'
-# example: Today we will be finding the different measures a circle gives us.
+# example: Today we will be performing basic arithmetic on two numbers
 #          What would operation would you like to perform? [add|sub|mult] 'add'
 #          The operation you chose was addition.
 #          Enter two numbers to find the sum: '2 5'
