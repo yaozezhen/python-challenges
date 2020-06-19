@@ -4,4 +4,15 @@
 # return type: string
 # example: s - "k9A* =1>c+" => return "*+19=>Ack "
 def asciiSort(s):
-  # fill-in code here
+  ls = []
+  outcome = []
+  for letter in s:
+    ls.append(ord(letter))
+  while True: 
+    outcome.append(chr(min(ls)))
+    ls.remove(min(ls))
+    if(len(ls) == 0): 
+      break
+  return "".join(outcome)
+
+print(asciiSort("k9A* =1>c+"))
