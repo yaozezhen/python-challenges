@@ -6,4 +6,17 @@
 #          Would you like to type another string? [y|n] 'n'
 #          Okay, bye :)
 def countLetters2():
-  # fill-in code here
+  while True: 
+    string = input("Type a string consisting of whatever characters you want: ")
+    count = 0
+    for letter in string: 
+      asc = ord(letter)
+      if((asc > 64 and asc < 91) or (asc > 96 and asc < 123)): 
+        count += 1
+    print("There are " + str(count) + " letters in " + string)
+    another = input("Woudl you like to type another string? [y|n] ")
+    if(another == "n"): 
+      print("Okay, bye :)")
+      return
+
+countLetters2()
