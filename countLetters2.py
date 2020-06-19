@@ -14,7 +14,7 @@ def countLetters2():
       if((asc > 64 and asc < 91) or (asc > 96 and asc < 123)): 
         count += 1
     print("There are " + str(count) + " letters in " + string)
-    another = input("Woudl you like to type another string? [y|n] ")
+    another = input("Would you like to type another string? [y|n] ")
     if(another == "n"): 
       print("Okay, bye :)")
       return
