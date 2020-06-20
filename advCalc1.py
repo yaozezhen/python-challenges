@@ -4,7 +4,7 @@
 #       part 1 of building PEMDAS-based calculator
 #       this represents parsing an expression as an algorithm
 #       for addition and subtraction, we go "left to right"
-#       the example for should be parsed as follows:
+#       the example should be parsed as follows:
 #           3+7-4+1  <- input
 #           10-4+1
 #           6+1
