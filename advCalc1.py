@@ -14,11 +14,45 @@
 #          Okay, the output is 7
 #          Do you want to calculate anything else? [y|n] 'n'
 #          Okay, bye bye :)
-def advCalc1()
-  # fill-in code here
+def advCalc():
+  while True: 
+    expression = input("Please enter and expression to calculate: ")
+    ls = []
+    numLs = []
+    oprLs = []
+    current = 0
+    lastNum = []
+    for item in expression: 
+      ls.append(item)
+    for i in range(len(ls)): 
+      if(ls[i] == "+" or ls[i] == "-"): 
+        oprLs.append(ls[i])
+        num = []
+        lastOpr = i
+        for j in range(current,i): 
+          num.append(ls[j])
+        numLs.append("".join(num))
+        current = i+1
+    for i in range(lastOpr+1, len(ls)): 
+      lastNum.append(ls[i])
+    numLs.append("".join(lastNum))
+    outcome = int(numLs[0])
+    for i in range(len(oprLs)): 
+      if(oprLs[i] == "+"): 
+        outcome = add(outcome, int(numLs[i+1]))
+      if(oprLs[i] == "-"): 
+        outcome = sub(outcome, int(numLs[i+1]))
+    print("Okay, the output is " + str(outcome))
+    more = input("Do you want to calculate anything else? [y|n] ")
+    if(more == "n"): 
+      print("Okay, bye bye :)")
+      break
+  return
   
 def add(a,b):
   return a + b
   
 def sub(a,b):
   return a - b
+
+advCalc()
