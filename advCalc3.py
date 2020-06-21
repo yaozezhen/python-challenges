@@ -4,7 +4,8 @@
 #       part 2 of building PEMDAS-based calculator
 #       this represents parsing an expression as an algorithm
 #       for operations in general, we go "left to right"
-#       multiplication and division will come first
+#       exponentials will come first
+#       then the multiplication and division
 #       then the addition and subtraction
 #       the example should be parsed as follows:
 #           1+2*3*4-2^3  <- input
@@ -12,7 +13,7 @@
 #           1+6*4-8
 #           1+24-8
 #           25-8
-#           17        <- output
+#           17           <- output
 # return type: nothing; program should end when the user types 'n'
 # example: Please enter an expression to calculate: '1+2*3*4-2^3'
 #          Okay, the output is 17
