@@ -118,9 +118,6 @@ def advCalc4():
       print("Okay, bye bye :)")
       break
   return
-
-def advCalc4():
-  # fill-in code here
   
 def add(a,b):
   return a + b
