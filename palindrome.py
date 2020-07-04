@@ -5,4 +5,12 @@
 # example: s - "racecar" => return True
 #          s - "abcdca" => return False
 def palindrome(s):
-  # fill-in code here
+  l = len(s)
+  b = True
+  for i in range(int(l/2)): 
+    if(s[i] != s[l-i-1]): 
+      b = False
+      break
+  return b
+
+print(palindrome("wow"))
