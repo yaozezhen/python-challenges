@@ -4,4 +4,10 @@
 # return type: string
 # example: s - "abc89c ba90* +*" => return "abc89 0*+"
 def removeRepeats(s):
-  # fill-in code here
+  l = []
+  for item in s: 
+    if item not in l: 
+      l.append(item)
+  return "".join(l)
+
+print(removeRepeats("abc89c ba90* +*"))
