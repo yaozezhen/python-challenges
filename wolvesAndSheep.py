@@ -1,4 +1,21 @@
 def wolvesAndSheep(n,w,s): 
+  b = [[0 for i in range(n)]for j in range(n)]
+  for i in range(n): 
+    l = []
+    for j in range(n): 
+      if([i,j] in w): 
+        b[i][j] = "W"
+      else: 
+        if([i,j] in s): 
+          b[i][j] = "S"
+        else: 
+          b[i][j] = "_"
+      l.append(b[i][j])
+    space = 1
+    for k in range(n-1):
+      l.insert(space," ")
+      space += 2
+    print("".join(l))
   board = [[0 for i in range(n)]for j in range(n)]
   for wolf in w: 
     row = wolf[0]
@@ -61,4 +78,4 @@ def wolvesAndSheep(n,w,s):
       else: 
         return("Your sheep are safe! >o<")
 
-print(wolvesAndSheep(4,[[1,0]],[[2,3]]))
+print(wolvesAndSheep(5,[[1,0]],[[2,3],[1,4]]))
